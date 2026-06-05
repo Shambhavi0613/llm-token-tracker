@@ -1,0 +1,7 @@
+﻿*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:sans-serif;background:#F6F8FC;color:#1C1C2E;font-size:14px}
+.app{max-width:1100px;margin:0 auto;padding:24px 20px 48px}
+input,select{background:#F0F4FA;border:0.5px solid #E2E8F2;border-radius:6px;padding:7px 10px;font-size:13px;font-family:inherit;color:#1C1C2E;outline:none;width:100%}
+button{font-family:inherit;font-size:13px;padding:7px 14px;border-radius:6px;border:0.5px solid #E2E8F2;background:#185FA5;color:#fff;cursor:pointer}
+button:hover{opacity:.88}
+button:disabled{opacity:.5;cursor:not-allowed}
