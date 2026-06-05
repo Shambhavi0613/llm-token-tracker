@@ -2,9 +2,6 @@
 
 A full-stack dashboard to track OpenAI and Anthropic API token usage and costs in real time. Built as a personal project to solve a real problem ? understanding exactly how much each LLM API call costs, in both USD and INR.
 
-## Screenshots
-> Add screenshots after running locally
-
 ## Features
 - Real-time token counting using tiktoken
 - Cost calculation in USD and INR
@@ -22,35 +19,22 @@ A full-stack dashboard to track OpenAI and Anthropic API token usage and costs i
 | Frontend | React 18, Redux Toolkit, Vite |
 | Styling | CSS with responsive layout |
 
-## Project Structure
-
-llm-token-tracker/
-??? backend/
-?   ??? main.py          # FastAPI app ? all endpoints
-?   ??? requirements.txt
-??? frontend/
-    ??? src/
-    ?   ??? App.jsx          # Main dashboard
-    ?   ??? api/index.js     # Backend API calls
-    ?   ??? store/           # Redux state management
-    ??? package.json
-    ??? vite.config.js
-
 ## Run Locally
 
-### Step 1 ? Backend
+### Backend
+`ash
 cd backend
 pip install -r requirements.txt
 python -m uvicorn main:app --reload
-
+`
 Backend runs on http://localhost:8000
-API docs at http://localhost:8000/docs
 
-### Step 2 ? Frontend
+### Frontend
+`ash
 cd frontend
 npm install
 npm run dev
-
+`
 Frontend runs on http://localhost:3000
 
 ## API Endpoints
@@ -65,35 +49,13 @@ Frontend runs on http://localhost:3000
 | GET | /summary | Aggregate stats by model |
 | DELETE | /history | Clear all logged calls |
 
-## Example API Usage
-
-Track a call:
-POST /track
-{
-  "model": "gpt-4o",
-  "input_tokens": 1500,
-  "output_tokens": 500,
-  "session_label": "booking flow"
-}
-
-Response:
-{
-  "status": "logged",
-  "call": {
-    "model": "gpt-4o",
-    "total_tokens": 2000,
-    "total_usd": 0.00001,
-    "total_inr": 0.835
-  }
-}
-
-## Supported Models and Pricing
+## Supported Models
 
 | Model | Input per 1M tokens | Output per 1M tokens |
 |-------|--------------------|--------------------|
-| GPT-4o | .00 | .00 |
-| GPT-4o Mini | .15 | .60 |
-| Claude Sonnet 4 | .00 | .00 |
+| GPT-4o | USD 5.00 | USD 15.00 |
+| GPT-4o Mini | USD 0.15 | USD 0.60 |
+| Claude Sonnet 4 | USD 3.00 | USD 15.00 |
 
 ## Author
 
