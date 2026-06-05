@@ -59,6 +59,5 @@ Frontend runs on http://localhost:3000
 
 ## Author
 
-Shambhavi Shukla ? AI Developer
-- GitHub: github.com/Shambhavi0613
-- LinkedIn: linkedin.com/in/shambhavishukla
+Shambhavi Shukla  AI Developer
+
